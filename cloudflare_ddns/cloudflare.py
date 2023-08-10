@@ -61,8 +61,8 @@ class CloudFlare:
         self.domain = domain
         self.proxied = proxied
         self.headers = {
-            'X-Auth-Key': api_key,
-            'X-Auth-Email': email
+            'X-Auth-Email': email,
+            'Authorization': f'Bearer {api_key}'
         }
         self.setup_zone()
 
